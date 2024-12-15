@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Najid Haque - Live TV</title>
+    <title> Live TV</title>
 
     <style>
         /* Base styles */
@@ -15,7 +15,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #464646;
+            background-color: #999;
         }
 
         header {
@@ -33,14 +33,14 @@
         .tv-container {
             display: flex;
             width: 90%;
-            height: 80%;
+            height: 80%; /* Adjusted to give more space for the list */
             max-width: 1200px;
             flex-direction: column;
         }
 
         .channel-list {
             width: 100%;
-            background: #333;
+            background: #999;
             color: white;
             overflow-y: auto;
             padding: 10px;
@@ -66,7 +66,7 @@
         }
 
         .channel-item:hover {
-            background-color: #444;
+            background-color: #111;
             transform: scale(1.05);
         }
 
@@ -76,31 +76,28 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-grow: 1;
+            height: 60%;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
 
         #player {
             width: 100%;
-            height: 100%;
+            height: 40%;
         }
     </style>
 </head>
 <body>
     <header>
-        Najid Haque - Live TV
+        Live TV
     </header>
 
     <div class="tv-container">
         <div class="player" id="player"></div>
         <div class="channel-list" id="channel-list"></div>
     </div>
-
-    <!-- Clappr JS -->
     <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
 
     <script>
-        // Define the channels from the M3U playlist
         const channels = [
             {
                 name: "Warner",
