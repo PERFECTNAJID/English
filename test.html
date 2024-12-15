@@ -28,7 +28,7 @@
         .tv-container {
             display: flex;
             width: 90%;
-            height: 70%;
+            height: 70%; /* Container height */
             max-width: 1200px;
             flex-direction: column;
         }
@@ -69,13 +69,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-grow: 1;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            overflow: hidden; /* Hide overflow */
         }
 
         #player {
             width: 100%;
             height: 100%;
+            border-radius: 10px; /* Slight radius for rounded corners */
         }
     </style>
 </head>
