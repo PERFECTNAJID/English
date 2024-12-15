@@ -28,9 +28,9 @@
         .tv-container {
             display: flex;
             width: 90%;
-            height: 70%; /* Container height */
             max-width: 1200px;
             flex-direction: column;
+            flex-grow: 1; /* Allow the container to grow */
         }
 
         .channel-list {
@@ -64,19 +64,19 @@
 
         .player {
             width: 100%;
-            height: 20%; /* Set height to 20% */
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
             background: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            position: relative; /* Position relative for absolute child */
             overflow: hidden; /* Hide overflow */
         }
 
         #player {
+            position: absolute; /* Position absolute to fill parent */
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            border-radius: 10px; /* Slight radius for rounded corners */
         }
     </style>
 </head>
